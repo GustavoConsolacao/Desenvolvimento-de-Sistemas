@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="style.css">
+    <title>Toyota</title>
+</head>
+
+<body>
+
+<header class="menu">
+    <nav>
+        <div class="logo-container">
+            <img src="imagens/toyotaredlogo.png" alt="Toyota Logo" id="imgLogo">
+        </div>
+
+        <ul class="menu-navegacao">
+            <li>
+                <a href="javascript:void(0);" id="vehiclesBtn">
+                    Vehicles
+                </a>
+            </li>
+
+            <li>
+                <a href="#Shop" id="shopBtn">
+                    Shop
+                </a>
+            </li>
+
+            <li>
+                <a href="#Support-Service" id="supportBtn">
+                    Support & Service
+                </a>
+            </li>
+        </ul>
+
+        <div class="account-container">
+            <button class="account-trigger" id="accountBtn">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="7" r="4"></circle>
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                </svg>
+
+                <span>Account</span>
+            </button>
+
+            <div class="toyota-card-modal" id="accountModal">
+                <h2 class="card-title">
+                    Personalize Your Toyota Experience
+                </h2>
+
+                <p class="card-subtitle">
+                    Create an account or sign in to access all the tools
+                    for your Toyota in one place.
+                </p>
+
+                <button class="cta-button">
+                    Create Account Or Sign In
+                </button>
+
+                <div class="menu-list">
+
+                    <div class="menu-item open">
+                        <div class="menu-header">
+                            <div class="menu-title-group">
+                                <svg width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor"
+                                    stroke-width="1.8">
+                                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                    <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                                </svg>
+
+                                <span>Notifications</span>
+                            </div>
+                        </div>
+
+                        <p class="menu-content">
+                            You currently have no notifications.
+                        </p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-header">
+                            <div class="menu-title-group">
+                                <svg width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor"
+                                    stroke-width="1.8">
+                                    <circle cx="12" cy="12" r="9"></circle>
+                                    <path d="M12 8v4l3 3"></path>
+                                </svg>
+
+                                <span>My Saves</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-header">
+                            <div class="menu-title-group">
+                                <svg width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor"
+                                    stroke-width="1.8">
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                                </svg>
+
+                                <span>Settings</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mega-menu" id="megaMenuShop">
+        <div class="mega-menu-container">
+
+            <div class="mega-col">
+                <h3 class="mega-title">SHOPPING TOOLS</h3>
+
+                <ul>
+                    <li><a href="#Shop">View Special Offers</a></li>
+                    <li><a href="#Shop">Build & Price</a></li>
+                    <li><a href="#Shop">Compare Vehicles</a></li>
+                    <li><a href="#Shop">Electrified</a></li>
+                    <li><a href="#Shop">Find a Dealer</a></li>
+                </ul>
+            </div>
+
+            <div class="mega-col">
+                <h3 class="mega-title">INVENTORY & FINANCE</h3>
+
+                <ul>
+                    <li><a href="#Shop">Search Inventory</a></li>
+                    <li><a href="#Shop">Shop Online with SmartPath</a></li>
+                    <li><a href="#Shop">Vehicle Brochures</a></li>
+                    <li><a href="#Shop">Toyota Certified Used Vehicles</a></li>
+                    <li><a href="#Shop">Buy Parts & Accessories</a></li>
+                    <li><a href="#Shop">Manage Payments</a></li>
+                </ul>
+            </div>
+
+            <div class="mega-col mega-account-card">
+                <h3 class="mega-title">MY TOYOTA</h3>
+
+                <h2>Build Your Toyota</h2>
+
+                <p>
+                    Customize your Toyota with colors,
+                    options and accessories to suit your lifestyle.
+                </p>
+
+                <button class="mega-btn-black">
+                    Build Now
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="mega-menu" id="megaMenuSupport">
+        <div class="mega-menu-container">
+
+            <div class="mega-col">
+                <h3 class="mega-title">
+                    LEARN ABOUT YOUR TOYOTA
+                </h3>
+
+                <ul>
+                    <li><a href="#Support-Service">Owners Resources</a></li>
+                    <li><a href="#Support-Service">My Vehicles Dashboard</a></li>
+                    <li><a href="#Support-Service">Warning Lights</a></li>
+                    <li><a href="#Support-Service">Manuals & Warranties</a></li>
+                    <li><a href="#Support-Service">Manage Subscriptions</a></li>
+                    <li><a href="#Support-Service">Vehicle Specs</a></li>
+                </ul>
+            </div>
+
+            <div class="mega-col">
+                <h3 class="mega-title">
+                    MAINTAIN YOUR TOYOTA
+                </h3>
+
+                <ul>
+                    <li><a href="#Support-Service">Schedule Service</a></li>
+                    <li><a href="#Support-Service">Service Specials</a></li>
+                    <li><a href="#Support-Service">Service History</a></li>
+                    <li><a href="#Support-Service">Certified Collision Centers</a></li>
+                    <li><a href="#Support-Service">Recalls & Service Campaigns</a></li>
+                    <li><a href="#Support-Service">Genuine Parts</a></li>
+                </ul>
+            </div>
+
+            <div class="mega-col mega-account-card">
+                <h3 class="mega-title">MY TOYOTA</h3>
+
+                <h2>
+                    Personalize Your Toyota Experience
+                </h2>
+
+                <p>
+                    Create an account or sign in to access
+                    all the tools for your Toyota in one place.
+                </p>
+
+                <button class="mega-btn-black">
+                    Create Account Or Sign In
+                </button>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+
+<section class="hero-section">
+
+    <div class="hero-slides-container">
+
+        <div class="hero-slide active">
+            <video class="hero-bg" autoplay muted loop playsinline preload="auto">
+                <source src="imagens/TYSB1698000H.mp4" type="video/mp4">
+            </video>
+
+            <div class="hero-content">
+                <h1>Toyota Tundra &amp; TRD</h1>
+                <p>Parceiro Oficial da NFL. Força sem limites.</p>
+                <button class="btn-primary">Ver Modelos</button>
+            </div>
+        </div>
+
+        <div class="hero-slide">
+            <img src="imagens/LND_MY24_0018_V002.avif"
+                alt="Toyota Land Cruiser"
+                class="hero-bg">
+
+            <div class="hero-content">
+                <h1>Land Cruiser 2024</h1>
+                <p>A lenda do todo-o-terreno reinventada.</p>
+                <button class="btn-primary">Explorar</button>
+            </div>
+        </div>
+
+        <div class="hero-slide">
+            <img src="imagens/COH_MY27_0020_V001.avif"
+                alt="Toyota Corolla Lineup"
+                class="hero-bg">
+
+            <div class="hero-content">
+                <h1>Corolla Heritage</h1>
+                <p>Do passado ao presente, a inovação continua.</p>
+                <button class="btn-primary">Descobrir Mais</button>
+            </div>
+        </div>
+
+        <div class="hero-slide">
+            <img src="imagens/mp1.webp"
+                alt="Toyota Crown 2027"
+                class="hero-bg">
+
+            <div class="hero-content">
+                <h1>Toyota Crown 2027</h1>
+                <p>Potência. Precisão. Prestígio.</p>
+                <button class="btn-primary">Saber Mais</button>
+            </div>
+        </div>
+
+        <div class="hero-slide">
+            <img src="imagens/CHB_MY27_0001_V001.avif"
+                alt="Toyota Corolla Hatchback"
+                class="hero-bg">
+
+            <div class="hero-content">
+                <h1>Corolla Hatchback 2027</h1>
+                <p>Design desportivo e dinâmica urbana.</p>
+                <button class="btn-primary">Saber Mais</button>
+            </div>
+        </div>
+
+    </div>
+
+    <button class="hero-arrow prev" id="prevSlide" aria-label="Anterior">
+        ‹
+    </button>
+
+    <button class="hero-arrow next" id="nextSlide" aria-label="Próximo">
+        ›
+    </button>
+
+    <div class="hero-dots" id="heroDots" aria-label="Navegação dos slides"></div>
+
+</section>
+
+
+<section class="explore-section sec-padding" id="Vehicles">
+
+    <h2>Explore All Vehicles</h2>
+
+    <ul class="tabs">
+        <li>Cars & Minivans</li>
+        <li>Trucks</li>
+        <li class="active">Crossovers & SUVs</li>
+        <li>Electrified</li>
+        <li>Upcoming Vehicles</li>
+    </ul>
+
+    <div class="car-cards-container">
+
+        <div class="car-card">
+            <img src="imagens/mp2.png" alt="Corolla Cross">
+
+            <div class="car-info">
+                <span class="badge">Hybrid Available</span>
+
+                <h3>2025 Corolla Cross</h3>
+
+                <p>Find the option that's right for you.</p>
+
+                <div class="price-row">
+                    <span class="price">$25,335</span>
+                    <span class="mpg">31/33 MPG</span>
+                </div>
+
+                <div class="card-actions">
+                    <button class="btn-primary">Explore</button>
+                    <a href="#">Build</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="car-card">
+            <img src="imagens/mp3.png" alt="RAV4">
+
+            <div class="car-info">
+                <span class="badge">
+                    Hybrid / Plug-in Hybrid Available
+                </span>
+
+                <h3>2025 RAV4</h3>
+
+                <p>Grab life and go.</p>
+
+                <div class="price-row">
+                    <span class="price">$31,900</span>
+                    <span class="mpg">44/42 MPG</span>
+                </div>
+
+                <div class="card-actions">
+                    <button class="btn-primary">Explore</button>
+                    <a href="#">Build</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="explore-footer">
+        <button class="btn-outline">
+            Explore All Vehicles
+        </button>
+
+        <a href="#">
+            Search Inventory
+        </a>
+    </div>
+
+</section>
+
+
+<section class="tools-section sec-padding bg-light" id="Shop">
+
+    <h2>Shopping Tools</h2>
+
+    <div class="tools-grid">
+
+        <div class="tool-card">
+            <img src="imagens/mp4.png" alt="Build and Price">
+            <span>Build & Price</span>
+        </div>
+
+        <div class="tool-card">
+            <img src="imagens/mp5.png" alt="Search Inventory">
+            <span>Search Inventory</span>
+        </div>
+
+        <div class="tool-card">
+            <img src="imagens/mp6.png" alt="Special Offers">
+            <span>Special Offers</span>
+        </div>
+
+        <div class="tool-card">
+            <img src="imagens/mp7.png" alt="Find a Dealer">
+            <span>Find a Dealer</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="ev-banner">
+
+    <img src="imagens/mp8.avif"
+        alt="Electrified Toyota Vehicles"
+        class="ev-bg">
+
+    <div class="ev-content">
+        <h2>
+            A lineup generating<br>
+            more possibilities.
+        </h2>
+
+        <button class="btn-primary-white">
+            Explore Electrified Vehicles
+        </button>
+    </div>
+
+</section>
+
+
+<section class="discover-section sec-padding" id="Support-Service">
+
+    <h2>Discover Toyota</h2>
+
+    <ul class="tabs">
+        <li class="active">Featured Stories</li>
+        <li>Vehicles & Technology</li>
+        <li>Offers & Services</li>
+    </ul>
+
+    <div class="discover-grid">
+
+        <div class="discover-card large">
+
+            <img src="imagens/mp9.png"
+                alt="Toyota Service">
+
+            <div class="discover-info">
+
+                <span>FEATURED STORIES</span>
+
+                <h3>
+                    Schedule your Toyota service.
+                </h3>
+
+                <button class="btn-primary-white">
+                    Schedule Now
+                </button>
+
+            </div>
+        </div>
+
+
+        <div class="discover-small-grid">
+
+            <div class="discover-card small">
+
+                <img src="imagens/mp10.jpg"
+                    alt="Toyota Accessories">
+
+                <div class="discover-info">
+
+                    <h3>
+                        Refresh your look this fall.
+                    </h3>
+
+                    <button class="btn-primary-white">
+                        Shop Now
+                    </button>
+
+                </div>
+            </div>
+
+
+            <div class="discover-card small">
+
+                <img src="imagens/mp11.avif"
+                    alt="Toyota SmartPath">
+
+                <div class="discover-info">
+
+                    <h3>
+                        A better way to shop for your Toyota.
+                    </h3>
+
+                    <button class="btn-primary-white">
+                        Explore the Experience
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer class="toyota-footer">
+
+    <div class="footer-container">
+
+        <div class="footer-top-bar">
+
+            <div class="footer-top-links">
+
+                <a href="#">Accessibility</a>
+
+                <a href="#" class="privacy-choices">
+                    YOUR PRIVACY CHOICES
+
+                    <span class="privacy-toggle">
+                        <span>✓</span>
+                        <span>✕</span>
+                    </span>
+                </a>
+
+                <a href="#">
+                    HOW TO DISCONNECT REMOTE VEHICLE ACCESS
+                </a>
+
+                <a href="#">
+                    Cookie Consent Options
+                </a>
+
+            </div>
+
+            <div class="footer-top-bottom-row">
+
+                <button class="btn-manage-preferences">
+                    Manage Preferences
+                </button>
+
+                <div class="social-icons">
+
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H7.5v-3H10V9.5C10 7.01 11.49 5.6 13.77 5.6c1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 3h-2.33v6.8c4.56-.93 8-4.96 8-9.8z"/>
+                        </svg>
+                    </a>
+
+                    <a href="#" class="social-icon" aria-label="YouTube">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M21.58 7.19a2.71 2.71 0 0 0-1.9-1.9C18 4.75 12 4.75 12 4.75s-6 0-7.68.54a2.71 2.71 0 0 0-1.9 1.9C2 8.88 2 12 2 12s0 3.12.42 4.81a2.71 2.71 0 0 0 1.9 1.9c1.68.54 7.68.54 7.68.54s6 0 7.68-.54a2.71 2.71 0 0 0 1.9-1.9C22 15.12 22 12 22 12s0-3.12-.42-4.81zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/>
+                        </svg>
+                    </a>
+
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+
+                    <a href="#" class="social-icon" aria-label="TikTok">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 1 1-5.2-1.74 2.89 2.89 0 0 1 2.31-2.83V7.62a6.34 6.34 0 1 0 6.34 6.34V9.28a8.28 8.28 0 0 0 4.77 1.41V7.24a4.8 4.8 0 0 1-1-.55z"/>
+                        </svg>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-columns">
+
+            <div class="footer-column">
+                <h3>SHOPPING TOOLS</h3>
+
+                <ul>
+                    <li><a href="#">Kelley Blue Book Trade-In Value</a></li>
+                    <li><a href="#">Build Your Toyota</a></li>
+                    <li><a href="#">Search Inventory</a></li>
+                    <li><a href="#">Find a Dealer</a></li>
+                    <li><a href="#">Shop Online With SmartPath</a></li>
+                    <li><a href="#">Special Offers</a></li>
+                    <li><a href="#">What Fits My Budget</a></li>
+                    <li><a href="#">Payment Estimator</a></li>
+                    <li><a href="#">Request a Quote</a></li>
+                    <li><a href="#">Toyota Certified Used Vehicles <span class="external-icon">↗</span></a></li>
+                    <li><a href="#">Buy Parts & Accessories <span class="external-icon">↗</span></a></li>
+                    <li><a href="#">Brochures</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-column">
+                <h3>VEHICLES</h3>
+
+                <ul>
+                    <li><a href="#">All Toyota Vehicles</a></li>
+                    <li><a href="#">SUVs</a></li>
+                    <li><a href="#">Trucks</a></li>
+                    <li><a href="#">Cars</a></li>
+                    <li><a href="#">Crossovers</a></li>
+                    <li><a href="#">Electrified Vehicles</a></li>
+                    <li><a href="#">Hybrids</a></li>
+                    <li><a href="#">Hybrid Cars</a></li>
+                    <li><a href="#">Hybrid SUVs</a></li>
+                    <li><a href="#">TRD Pro Series</a></li>
+                    <li><a href="#">Nightshade Series</a></li>
+                    <li><a href="#">Gazoo Racing <span class="external-icon">↗</span></a></li>
+                    <li><a href="#">All Upcoming Vehicles</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-column">
+                <h3>HELPFUL LINKS</h3>
+
+                <ul>
+                    <li><a href="#">Dealers</a></li>
+                    <li><a href="#">Deals and Incentives</a></li>
+                    <li><a href="#">Audio Multimedia & Connected Services</a></li>
+                    <li><a href="#">Mobile Phone Compatibility</a></li>
+                    <li><a href="#">Mobility <span class="external-icon">↗</span></a></li>
+                    <li><a href="#">Toyota Fleet <span class="external-icon">↗</span></a></li>
+                    <li><a href="#">Toyota Financial Services <span class="external-icon">↗</span></a></li>
+                    <li><a href="#">Toyota Insurance <span class="external-icon">↗</span></a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-column">
+                <h3>OWNERS</h3>
+
+                <ul>
+                    <li><a href="#">Owners Resources</a></li>
+                    <li><a href="#">ToyotaCare & Maintenance Plans</a></li>
+                    <li><a href="#">Safety Recalls & Service Campaigns</a></li>
+                    <li><a href="#">Service Centers</a></li>
+                    <li><a href="#">Service Specials</a></li>
+                    <li><a href="#">Safety Hub</a></li>
+                    <li><a href="#">Schedule Service</a></li>
+                    <li><a href="#">Warning Lights</a></li>
+                    <li><a href="#">Manuals & Warranties</a></li>
+                    <li><a href="#">Manage Payments</a></li>
+                    <li><a href="#">Express Maintenance</a></li>
+                    <li><a href="#">Rent a Toyota</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-column">
+                <h3>ABOUT TOYOTA</h3>
+
+                <ul>
+                    <li><a href="#">Careers <span class="external-icon">↗</span></a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Company</a></li>
+                    <li><a href="#">Toyota Outfitters <span class="external-icon">↗</span></a></li>
+                    <li><a href="#">Newsroom <span class="external-icon">↗</span></a></li>
+                    <li><a href="#">Toyota Global <span class="external-icon">↗</span></a></li>
+                    <li><a href="#">Motorsports <span class="external-icon">↗</span></a></li>
+                    <li><a href="#">Plant Tours <span class="external-icon">↗</span></a></li>
+                    <li><a href="#">Partner With Toyota <span class="external-icon">↗</span></a></li>
+                    <li><a href="#">Hydrogen Fuel Cell Solutions</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <hr class="footer-divider">
+
+
+        <div class="footer-bottom">
+
+            <div class="footer-logo">
+                <img src="imagens/toyotaredlogo.png" alt="Toyota Logo">
+            </div>
+
+            <div class="footer-bottom-main-links">
+                <a href="#">Contact Us</a>
+                <a href="#">FAQs</a>
+                <a href="#">Español</a>
+            </div>
+
+            <p class="footer-copyright">
+                ©2026 Toyota Motor Sales, U.S.A., Inc.
+                All information applies to U.S. vehicles only.
+            </p>
+
+            <div class="footer-legal-links">
+                <a href="#">Privacy Notice</a>
+                <span class="separator">|</span>
+                <a href="#">Legal Terms</a>
+                <span class="separator">|</span>
+                <a href="#">Site Map</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
