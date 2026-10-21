@@ -1,0 +1,664 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #020817;
+    color: white;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    height: 76px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 0 48px;
+    background: #020817;
+    position: relative;
+    z-index: 20;
+}
+
+.menu {
+    width: 38px;
+    height: 30px;
+    border: 0;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.menu span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: white;
+    transition: 0.3s ease;
+}
+
+.menu:hover span:first-child { transform: translateX(6px); }
+.menu:hover span:last-child { transform: translateX(3px); }
+
+.logo-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 155px;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover { transform: scale(1.04); }
+
+.retailer {
+    justify-self: end;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.retailer::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #f47721;
+    transition: width 0.3s ease;
+}
+
+.retailer:hover::after { width: 100%; }
+.retailer span { font-size: 16px; transition: transform 0.3s ease; }
+.retailer:hover span { transform: translateX(5px); }
+
+
+/* =========================================
+   MODELS NAV
+========================================= */
+
+.models-nav {
+    min-height: 76px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 0 7.5%;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: #020817;
+    position: relative;
+    z-index: 10;
+}
+
+.models-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.categories {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.categories a {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding: 28px 0;
+    color: rgba(255, 255, 255, 0.72);
+    transition: color 0.3s ease;
+}
+
+.categories a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 18px;
+    width: 0;
+    height: 2px;
+    background: #f47721;
+    transition: width 0.3s ease;
+}
+
+.categories a:hover,
+.categories a.active { color: white; }
+.categories a:hover::after,
+.categories a.active::after { width: 100%; }
+
+.view-buttons {
+    justify-self: end;
+    display: flex;
+    gap: 8px;
+}
+
+.view-buttons button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 17px;
+    transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.view-buttons button:hover {
+    background: white;
+    border-color: white;
+    color: #020817;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero { background: #020817; }
+
+.hero-car {
+    height: 520px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.car-glow {
+    position: absolute;
+    width: 600px;
+    height: 280px;
+    background: rgba(48, 86, 140, 0.18);
+    filter: blur(90px);
+    border-radius: 50%;
+}
+
+.hero-car img {
+    width: min(1000px, 78vw);
+    max-height: 520px;
+    object-fit: contain;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.7s ease, filter 0.7s ease, opacity 0.3s ease;
+}
+
+.hero-car:hover img {
+    transform: scale(1.025);
+    filter: brightness(1.05);
+}
+
+
+/* =========================================
+   CONTROLES DO SLIDER (RÉPLICA EXACTA McLAREN)
+========================================= */
+
+.mclaren-controls-container {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 24px !important;
+    margin-top: -10px !important;
+    margin-bottom: 35px !important;
+    width: 100% !important;
+    position: relative;
+    z-index: 10;
+}
+
+.mclaren-arrow-btn {
+    all: unset !important;
+    background: transparent !important;
+    border: none !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    cursor: pointer !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 6px !important;
+    transition: color 0.3s ease, transform 0.2s ease !important;
+}
+
+.mclaren-arrow-btn:hover {
+    color: #ffffff !important;
+    transform: scale(1.15);
+}
+
+.mclaren-bars-wrapper {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 12px !important;
+}
+
+.mclaren-bar {
+    display: block !important;
+    width: 38px !important;
+    height: 1.5px !important;
+    min-height: 1.5px !important;
+    background-color: rgba(255, 255, 255, 0.22) !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s ease !important;
+}
+
+.mclaren-bar:hover {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.mclaren-bar.active {
+    background-color: #ffffff !important;
+}
+
+
+/* =========================================
+   CAR INFORMATION
+========================================= */
+
+.hero-information {
+    min-height: 180px;
+    padding: 0 7.5% 55px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+    gap: 80px;
+}
+
+.car-name h1 {
+    font-size: clamp(54px, 7vw, 100px);
+    font-weight: 300;
+    line-height: 0.85;
+    letter-spacing: -4px;
+}
+
+.car-links {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.car-links a {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    position: relative;
+    padding-bottom: 7px;
+}
+
+.car-links a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #f47721;
+    transition: width 0.3s ease;
+}
+
+.car-links a:hover::after { width: 100%; }
+.car-links span { color: #f47721; transition: transform 0.3s ease; }
+.car-links a:hover span { transform: translateX(5px); }
+
+.car-description { max-width: 450px; }
+.car-description p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* =========================================
+   JOURNEY
+========================================= */
+
+.journey {
+    background: #f1f1f1;
+    color: #101010;
+    padding: 90px 7.5% 100px;
+}
+
+.section-heading { margin-bottom: 45px; }
+.section-heading span {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.section-heading h2 {
+    font-size: clamp(30px, 4vw, 52px);
+    font-weight: 300;
+    letter-spacing: -1.5px;
+}
+
+.journey-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.journey-card {
+    display: block;
+    background: white;
+    overflow: hidden;
+}
+
+.card-image { height: 230px; overflow: hidden; }
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.7s ease, filter 0.7s ease;
+}
+
+.journey-card:hover .card-image img {
+    transform: scale(1.06);
+    filter: brightness(0.9);
+}
+
+.card-title {
+    min-height: 76px;
+    padding: 0 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.card-title strong {
+    color: #f47721;
+    font-size: 19px;
+    transition: transform 0.3s ease;
+}
+
+.journey-card:hover .card-title strong { transform: translateX(6px); }
+
+
+/* =========================================
+   FEATURED
+========================================= */
+
+.featured {
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    background: #000;
+}
+
+.featured-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 1s ease;
+}
+
+.featured:hover .featured-image { transform: scale(1.035); }
+
+.featured-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.45) 38%, rgba(0, 0, 0, 0.05) 75%);
+}
+
+.featured-content {
+    position: absolute;
+    left: 7.5%;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 500px;
+}
+
+.featured-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #f47721;
+}
+
+.featured-content h2 {
+    font-size: clamp(38px, 5vw, 70px);
+    line-height: 0.95;
+    font-weight: 300;
+    margin: 18px 0 25px;
+    letter-spacing: -2px;
+}
+
+.featured-content p {
+    max-width: 400px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 32px;
+}
+
+.featured-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.featured-link span { color: #f47721; transition: transform 0.3s ease; }
+.featured-link:hover span { transform: translateX(6px); }
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer { background: #f1f1f1; color: #111; }
+.footer-top { padding: 55px 7.5% 70px; }
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 10px;
+    margin-bottom: 65px;
+    color: #777;
+}
+
+.breadcrumb a { transition: color 0.3s ease; }
+.breadcrumb a:hover { color: #f47721; }
+.breadcrumb strong { color: #111; }
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1.5fr;
+    gap: 40px;
+}
+
+.footer-column h3, .subscribe h3 {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
+}
+
+.footer-column a {
+    display: block;
+    width: fit-content;
+    font-size: 12px;
+    margin-bottom: 13px;
+    color: #555;
+    position: relative;
+}
+
+.footer-column a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 1px;
+    background: #f47721;
+    transition: width 0.3s ease;
+}
+
+.footer-column a:hover::after { width: 100%; }
+
+.email-box {
+    height: 48px;
+    border-bottom: 1px solid #555;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #666;
+}
+
+.email-box strong { font-size: 18px; transition: transform 0.3s ease; }
+.email-box:hover strong { transform: translateX(5px); }
+
+.subscribe p {
+    font-size: 11px;
+    line-height: 1.6;
+    color: #666;
+    margin-top: 20px;
+    max-width: 300px;
+}
+
+.language {
+    margin-top: 28px;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    font-size: 11px;
+    color: #333;
+    display: flex;
+    gap: 8px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #d5d5d5;
+    padding: 28px 7.5%;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.footer-brand img { width: 130px; filter: brightness(0); }
+
+.legal-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px 25px;
+}
+
+.legal-links a {
+    font-size: 9px;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.legal-links a:hover { color: #f47721; }
+
+
+/* =========================================
+   MEDIA QUERIES
+========================================= */
+
+@media (max-width: 1100px) {
+    .models-nav {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .models-title { text-align: center; }
+    .categories { justify-content: center; flex-wrap: wrap; }
+    .view-buttons { display: none; }
+    .hero-information { gap: 40px; }
+    .footer-grid { grid-template-columns: repeat(3, 1fr); }
+    .subscribe { grid-column: span 3; }
+}
+
+@media (max-width: 800px) {
+    .header { padding: 0 25px; }
+    .retailer { font-size: 9px; }
+    .logo { width: 125px; }
+    .categories { gap: 20px; }
+    .hero-car { height: 430px; }
+    .hero-car img { width: 90vw; }
+    .hero-information { grid-template-columns: 1fr; gap: 35px; padding-bottom: 60px; }
+    .journey-grid { grid-template-columns: 1fr; }
+    .card-image { height: 260px; }
+    .featured { height: 520px; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .subscribe { grid-column: span 2; }
+    .footer-bottom { grid-template-columns: 1fr; }
+    .legal-links { justify-content: flex-start; }
+}
+
+@media (max-width: 550px) {
+    .header { height: 65px; }
+    .retailer { display: none; }
+    .logo { width: 115px; }
+    .models-nav { padding-left: 20px; padding-right: 20px; }
+    .categories { gap: 15px; }
+    .categories a { font-size: 10px; }
+    .hero-car { height: 340px; }
+    .hero-car img { width: 100vw; }
+    .car-name h1 { font-size: 65px; }
+    .journey { padding: 60px 20px; }
+    .featured { height: 500px; }
+    .featured-content { left: 25px; right: 25px; }
+    .featured-content h2 { font-size: 42px; }
+    .footer-top { padding-left: 25px; padding-right: 25px; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .subscribe { grid-column: span 1; }
+    .footer-bottom { padding-left: 25px; padding-right: 25px; }
+}

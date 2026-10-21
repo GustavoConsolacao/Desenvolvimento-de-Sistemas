@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McLaren</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="McLaren.css">
+</head>
+<body>
+
+    <div class="hero-container">
+        <div class="video-container">
+            <video id="bgVideo" autoplay loop muted playsinline preload="auto">
+                <source src="../McLaren/Vídeos/COMBINED-WEB-ALT-2.7K.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+
+        <header class="header-mclaren">
+            <h1 class="logo-mclaren">MCLAREN</h1>
+
+            <ul class="nav-menu">
+                <li class="nav-item-container">
+                    <a href="javascript:void(0)" class="nav-link">
+                        <span>Automotivo</span>
+                        <i class="chevron fa-solid fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="Automotive.html" target="_blank" rel="noopener noreferrer" class="dropdown-item">Automotivo</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="Automotive.html" target="_blank" rel="noopener noreferrer" class="dropdown-item">McLaren W1</a>
+                    </div>
+                </li>
+
+                <li class="nav-item-container">
+                    <a href="javascript:void(0)" class="nav-link">
+                        <span>Corrida</span>
+                        <i class="chevron fa-solid fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="javascript:void(0)" class="dropdown-item">Fórmula 1</a>
+                        <a href="javascript:void(0)" class="dropdown-item">IndyCar</a>
+                        <a href="javascript:void(0)" class="dropdown-item">Resistência</a>
+                    </div>
+                </li>
+
+                <li class="nav-item-container">
+                    <a href="javascript:void(0)" class="nav-link">Golfe</a>
+                </li>
+
+                <li class="nav-item-container">
+                    <a href="javascript:void(0)" class="nav-link">Corporativo</a>
+                </li>
+
+                <li class="nav-item-container">
+                    <a href="javascript:void(0)" class="nav-link">
+                        <span>Carreiras</span>
+                        <i class="chevron fa-solid fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="javascript:void(0)" class="dropdown-item">Carreiras na área automotiva</a>
+                        <a href="javascript:void(0)" class="dropdown-item">Carreiras no automobilismo</a>
+                    </div>
+                </li>
+
+                <li class="nav-item-container">
+                    <a href="javascript:void(0)" class="nav-link">Loja</a>
+                </li>
+            </ul>
+        </header>
+
+        <main class="hero-content">
+            <h2 class="hero-title">
+                BEM-VINDO AO MUNDO<br>DA MCLAREN
+            </h2>
+            <div class="btn-group">
+                <a href="Automotive.html" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                    VISITE A SEÇÃO AUTOMOTIVA
+                </a>
+                <a href="javascript:void(0)" class="btn-secondary">
+                    VISITE AS CORRIDAS
+                </a>
+            </div>
+        </main>
+
+        <button onclick="toggleCookieModal(true)" title="Definições de cookies" class="cookie-btn">
+            <i class="fa-solid fa-cookie-bite text-base"></i>
+        </button>
+
+        <button id="videoToggleBtn" onclick="toggleVideoPlayback()" title="Pausar / Reproduzir Vídeo" class="video-control-btn">
+            <span id="videoIcon">||</span>
+        </button>
+    </div>
+
+    <div id="cookieModal" class="cookie-modal-backdrop">
+        <div class="cookie-modal">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-base font-bold text-white uppercase tracking-wider">Centro de consulta de privacidade</h3>
+                <button onclick="toggleCookieModal(false)" class="text-gray-400 hover:text-white text-xl font-bold cursor-pointer">&times;</button>
+            </div>
+
+            <p class="text-xs text-gray-300 leading-relaxed mb-6">
+                Quando visita qualquer site, este pode armazenar ou recolher informações no seu navegador, principalmente na forma de cookies. Esta informação pode ser sobre si, as suas preferências ou o seu dispositivo.
+            </p>
+
+            <h4 class="text-xs font-bold text-white mb-4 uppercase tracking-wider">Gerir preferências de cookies</h4>
+
+            <div class="space-y-3 text-xs">
+                <div class="flex items-center justify-between p-3 bg-neutral-900 rounded border border-white/10">
+                    <p class="font-bold text-white">Cookies de funcionalidade</p>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="flex items-center justify-between p-3 bg-neutral-900 rounded border border-white/10">
+                    <p class="font-bold text-white">Cookies de desempenho</p>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="flex items-center justify-between p-3 bg-neutral-900 rounded border border-white/10">
+                    <p class="font-bold text-white">Cookies de segmentação</p>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="flex items-center justify-between p-3 bg-neutral-900 rounded border border-white/10">
+                    <p class="font-bold text-white">Biscoitos necessários</p>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-orange-500">Sempre ativo</span>
+                </div>
+            </div>
+
+            <div class="flex gap-3 mt-8">
+                <button onclick="toggleCookieModal(false)" class="w-full py-3 bg-neutral-800 hover:bg-neutral-700 text-white font-bold text-xs uppercase tracking-wider rounded border border-white/10 cursor-pointer">
+                    Rejeitar todos
+                </button>
+                <button onclick="toggleCookieModal(false)" class="w-full py-3 bg-[#ff8000] hover:bg-[#e67300] text-black font-bold text-xs uppercase tracking-wider rounded cursor-pointer">
+                    Confirmar as minhas escolhas
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const video = document.getElementById('bgVideo');
+        const videoIcon = document.getElementById('videoIcon');
+        const cookieModal = document.getElementById('cookieModal');
+
+        async function toggleVideoPlayback() {
+            if (!video) return;
+            if (video.paused) {
+                await video.play();
+                videoIcon.textContent = "||";
+            } else {
+                video.pause();
+                videoIcon.textContent = "▶";
+            }
+        }
+
+        function toggleCookieModal(show) {
+            if (show) {
+                cookieModal.classList.add('active');
+            } else {
+                cookieModal.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-PT" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McLaren Automotive</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mclaren: {
+                            papaya: '#ff8000',
+                            dark: '#0e0e0e',
+                            card: '#161616'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="McLaren.css">
+</head>
+<body class="bg-white text-neutral-900 font-sans antialiased selection:bg-mclaren-papaya selection:text-black">
+
+    <div class="relative w-full h-screen min-h-[680px] flex flex-col justify-between bg-black text-white overflow-hidden">
+        
+        <video id="bgVideoAutomotive" class="absolute top-0 left-0 w-full h-full object-cover z-0 scale-105 transition-transform duration-1000" autoplay loop muted playsinline poster="https://images.unsplash.com/photo-1621135802920-133df287f89c?q=80&w=1600">
+            <source src="Vídeos/MAL-WEBSITE-2.7K-(ALT-END).mp4" type="video/mp4">
+            <source src="../McLaren/Vídeos/MAL-WEBSITE-2.7K-(ALT-END).mp4" type="video/mp4">
+            <source src="https://cdn.pixabay.com/video/2021/08/04/83866-583597818_large.mp4" type="video/mp4">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-sport-car-driving-on-a-racetrack-41562-large.mp4" type="video/mp4">
+        </video>
+
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/20 to-black/80 z-10"></div>
+
+        <header class="relative z-20 w-full border-b border-white/10 bg-black/40 backdrop-blur-md">
+            <div class="max-w-[1440px] mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
+                
+                <a href="McLaren.html" class="flex items-center gap-2 group">
+                    <span class="text-2xl md:text-3xl font-black tracking-tighter text-white group-hover:text-mclaren-papaya transition-colors">
+                        MCLAREN
+                    </span>
+                    <span class="hidden sm:inline-block text-[10px] uppercase font-bold tracking-widest text-mclaren-papaya border-l border-white/20 pl-3">
+                        Automotive
+                    </span>
+                </a>
+
+                <nav class="hidden lg:flex items-center gap-8 text-xs font-bold uppercase tracking-widest text-neutral-200">
+                    <a href="#perfeicao" class="hover:text-mclaren-papaya transition-colors py-2">Modelos</a>
+                    <a href="hypercar.html" target="_blank" class="hover:text-mclaren-papaya transition-colors py-2">Hypercar</a>
+                    <a href="#mso" class="hover:text-mclaren-papaya transition-colors py-2">MSO</a>
+                    <a href="#experiencias" class="hover:text-mclaren-papaya transition-colors py-2">Experiências</a>
+                    <a href="https://cars.mclaren.com" target="_blank" class="hover:text-mclaren-papaya transition-colors py-2">Revendedores</a>
+                </nav>
+
+                <div class="flex items-center gap-4">
+                    <a href="McLaren.html" class="bg-mclaren-papaya hover:bg-orange-600 text-black px-5 py-2.5 rounded-none text-xs font-black uppercase tracking-wider transition-all transform hover:-translate-y-0.5 flex items-center gap-2 shadow-lg">
+                        <i class="fa-solid fa-arrow-left"></i> <span>Início</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main class="relative z-20 max-w-[1440px] mx-auto w-full px-6 md:px-12 mb-16 md:mb-24">
+            <div class="max-w-2xl">
+                <span class="inline-block text-mclaren-papaya font-bold text-xs uppercase tracking-[0.3em] mb-4">
+                    Inovação Sem Limites
+                </span>
+                <h1 class="text-4xl md:text-7xl font-black uppercase leading-none tracking-tight mb-6 text-white drop-shadow-md">
+                    MCLAREN NEVER<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-neutral-200 to-neutral-400">STANDS STILL.</span>
+                </h1>
+                <p class="text-sm md:text-base text-neutral-300 font-normal leading-relaxed mb-8 max-w-lg">
+                    Cada superdesportivo McLaren é a expressão máxima de performance, leveza extrema e paixão automobilística.
+                </p>
+                <div class="flex flex-wrap items-center gap-4">
+                    <a href="hypercar.html" target="_blank" class="bg-white text-black hover:bg-mclaren-papaya hover:text-black px-8 py-4 text-xs font-black uppercase tracking-widest transition-all">
+                        EXPLORAR MODELOS
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <div class="relative z-20 max-w-[1440px] mx-auto w-full px-6 md:px-12 pb-6 flex justify-between items-center text-xs font-semibold text-neutral-400">
+            <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-mclaren-papaya animate-pulse"></span>
+                <span class="uppercase tracking-widest text-[11px] text-neutral-300">McLaren Automotive Global</span>
+            </div>
+            
+            <button onclick="toggleHeroVideo()" id="videoBtn" title="Pausar / Reproduzir Vídeo" class="w-10 h-10 rounded-full border border-white/30 bg-black/60 text-white hover:bg-mclaren-papaya hover:text-black hover:border-mclaren-papaya transition-all flex items-center justify-center">
+                <i class="fa-solid fa-pause"></i>
+            </button>
+        </div>
+    </div>
+
+    <section class="max-w-5xl mx-auto text-center px-6 py-20 bg-white">
+        <span class="text-mclaren-papaya font-bold tracking-[0.25em] text-xs uppercase block mb-4">MCLAREN AUTOMOTIVE</span>
+        <h2 class="text-2xl md:text-4xl font-light leading-relaxed text-neutral-900 tracking-tight">
+            "A McLaren nunca para. Engenharia audaciosa, inovação intransigente. Cada modelo é implacavelmente aperfeiçoado para ultrapassar os limites do possível."
+        </h2>
+    </section>
+
+    <section id="perfeicao" class="py-20 bg-neutral-100 border-y border-neutral-200">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-12 mb-10 flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+            <div>
+                <span class="text-xs font-bold tracking-[0.2em] uppercase text-mclaren-papaya block mb-2">MCLAREN</span>
+                <h2 class="text-2xl md:text-4xl font-black uppercase tracking-tight text-neutral-900">
+                    EXPLORE NOSSA BUSCA PELA PERFEIÇÃO
+                </h2>
+            </div>
+            
+            <div class="flex items-center gap-3 self-end">
+                <button onclick="scrollCarousel(-380)" class="w-12 h-12 rounded-full border border-neutral-300 bg-white text-neutral-900 hover:bg-mclaren-papaya hover:text-black hover:border-mclaren-papaya transition-all flex items-center justify-center shadow-sm active:scale-95">
+                    <i class="fa-solid fa-chevron-left text-sm"></i>
+                </button>
+                <button onclick="scrollCarousel(380)" class="w-12 h-12 rounded-full border border-neutral-300 bg-white text-neutral-900 hover:bg-mclaren-papaya hover:text-black hover:border-mclaren-papaya transition-all flex items-center justify-center shadow-sm active:scale-95">
+                    <i class="fa-solid fa-chevron-right text-sm"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="carouselContainer" class="flex overflow-x-auto gap-6 px-6 md:px-12 max-w-[1440px] mx-auto custom-scrollbar pb-8 snap-x scroll-smooth">
+            
+            <div class="min-w-[300px] md:min-w-[360px] max-w-[360px] bg-white rounded-none overflow-hidden snap-start flex flex-col justify-between shadow-sm hover:shadow-2xl transition-all duration-300 border border-neutral-200 group">
+                <div class="relative overflow-hidden h-56 bg-black">
+                    <img src="Imgens/mclaren-nova-logo-4.webp" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1578844251758-2f71da64c96f?q=80&w=800';" alt="Nosso novo marco mundo" class="w-full h-full object-cover filter grayscale group-hover:scale-105 group-hover:grayscale-0 transition-all duration-500">
+                </div>
+                <div class="p-8 flex flex-col justify-between flex-grow">
+                    <div>
+                        <h3 class="font-bold text-xl mb-3 text-neutral-900 group-hover:text-mclaren-papaya transition-colors">Nosso novo marco mundo</h3>
+                        <p class="text-xs text-neutral-600 leading-relaxed mb-8">A McLaren sempre desafiou as convenções em busca do supercarro do futuro.</p>
+                    </div>
+                    <a href="javascript:void(0)" class="text-xs font-extrabold text-neutral-900 uppercase tracking-widest flex items-center gap-2 group-hover:text-mclaren-papaya transition-colors">
+                        <span>DESCUBRA AGORA</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="min-w-[300px] md:min-w-[360px] max-w-[360px] bg-white rounded-none overflow-hidden snap-start flex flex-col justify-between shadow-sm hover:shadow-2xl transition-all duration-300 border border-neutral-200 group">
+                <div class="relative overflow-hidden h-56 bg-black">
+                    <img src="Imgens/red-50-hero-desktop-cropped.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1621135802920-133df287f89c?q=80&w=800';" alt="Hypercars McLaren" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+                </div>
+                <div class="p-8 flex flex-col justify-between flex-grow">
+                    <div>
+                        <h3 class="font-bold text-xl mb-3 text-neutral-900 group-hover:text-mclaren-papaya transition-colors">Gama Hypercar</h3>
+                        <p class="text-xs text-neutral-600 leading-relaxed mb-8">Modelos de alta performance com engenharia extrema e aerodinâmica avançada.</p>
+                    </div>
+                    <a href="hypercar.html" target="_blank" class="text-xs font-extrabold text-neutral-900 uppercase tracking-widest flex items-center gap-2 group-hover:text-mclaren-papaya transition-colors">
+                        <span>EXPLORAR HYPERCAR</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="min-w-[300px] md:min-w-[360px] max-w-[360px] bg-white rounded-none overflow-hidden snap-start flex flex-col justify-between shadow-sm hover:shadow-2xl transition-all duration-300 border border-neutral-200 group">
+                <div class="relative overflow-hidden h-56 bg-black">
+                    <img src="Imgens/mclaren-courage-and-pioneering-spirit.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=800';" alt="Bruce McLaren" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+                </div>
+                <div class="p-8 flex flex-col justify-between flex-grow">
+                    <div>
+                        <h3 class="font-bold text-xl mb-3 text-neutral-900 group-hover:text-mclaren-papaya transition-colors">Coragem e Espírito Pioneiro</h3>
+                        <p class="text-xs text-neutral-600 leading-relaxed mb-8">Nosso fundador, Bruce McLaren, continua a inspirar cada linha e cada componente.</p>
+                    </div>
+                    <a href="javascript:void(0)" class="text-xs font-extrabold text-neutral-900 uppercase tracking-widest flex items-center gap-2 group-hover:text-mclaren-papaya transition-colors">
+                        <span>CONHEÇA BRUCE</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="min-w-[300px] md:min-w-[360px] max-w-[360px] bg-white rounded-none overflow-hidden snap-start flex flex-col justify-between shadow-sm hover:shadow-2xl transition-all duration-300 border border-neutral-200 group">
+                <div class="relative overflow-hidden h-56 bg-black">
+                    <img src="Imgens/mclaren-our-cars.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?q=80&w=800';" alt="Nossos carros" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+                </div>
+                <div class="p-8 flex flex-col justify-between flex-grow">
+                    <div>
+                        <h3 class="font-bold text-xl mb-3 text-neutral-900 group-hover:text-mclaren-papaya transition-colors">Nossa Gama de Modelos</h3>
+                        <p class="text-xs text-neutral-600 leading-relaxed mb-8">Design aerodinâmico funcional e presença inconfundível em cada estrada.</p>
+                    </div>
+                    <a href="javascript:void(0)" class="text-xs font-extrabold text-neutral-900 uppercase tracking-widest flex items-center gap-2 group-hover:text-mclaren-papaya transition-colors">
+                        <span>EXPLORE A GAMA</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="min-w-[300px] md:min-w-[360px] max-w-[360px] bg-white rounded-none overflow-hidden snap-start flex flex-col justify-between shadow-sm hover:shadow-2xl transition-all duration-300 border border-neutral-200 group">
+                <div class="relative overflow-hidden h-56 bg-black">
+                    <img src="Imgens/mclaren-our-legacy.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=800';" alt="Nosso legado" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+                </div>
+                <div class="p-8 flex flex-col justify-between flex-grow">
+                    <div>
+                        <h3 class="font-bold text-xl mb-3 text-neutral-900 group-hover:text-mclaren-papaya transition-colors">Nosso Legado de Vitórias</h3>
+                        <p class="text-xs text-neutral-600 leading-relaxed mb-8">Seis décadas de inovação na Fórmula 1 e supercarros icónicos.</p>
+                    </div>
+                    <a href="javascript:void(0)" class="text-xs font-extrabold text-neutral-900 uppercase tracking-widest flex items-center gap-2 group-hover:text-mclaren-papaya transition-colors">
+                        <span>DESCUBRA O LEGADO</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="min-w-[300px] md:min-w-[360px] max-w-[360px] bg-white rounded-none overflow-hidden snap-start flex flex-col justify-between shadow-sm hover:shadow-2xl transition-all duration-300 border border-neutral-200 group">
+                <div class="relative overflow-hidden h-56 bg-black">
+                    <img src="Imgens/mclaren-an-invitation.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=800';" alt="Um convite" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+                </div>
+                <div class="p-8 flex flex-col justify-between flex-grow">
+                    <div>
+                        <h3 class="font-bold text-xl mb-3 text-neutral-900 group-hover:text-mclaren-papaya transition-colors">Um Convite Exclusivo</h3>
+                        <p class="text-xs text-neutral-600 leading-relaxed mb-8">Pistas de gelo, hospitalidade na Fórmula 1 e experiências exclusivas de condução.</p>
+                    </div>
+                    <a href="javascript:void(0)" class="text-xs font-extrabold text-neutral-900 uppercase tracking-widest flex items-center gap-2 group-hover:text-mclaren-papaya transition-colors">
+                        <span>EXPERIÊNCIAS MCLAREN</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="mso" class="bg-neutral-950 text-white py-24 px-6 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <span class="text-mclaren-papaya font-black tracking-[0.3em] text-xs uppercase block mb-4">
+                MCLAREN SPECIAL OPERATIONS
+            </span>
+            <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tight mb-6 text-white">
+                ARTESANATO E PERSONALIZAÇÃO SEM LIMITES
+            </h2>
+            <p class="text-base md:text-xl font-light text-neutral-300 leading-relaxed mb-10 max-w-2xl mx-auto">
+                Personalizamos cada superfície, cada costura e cada detalhe do seu veículo para que reflita perfeitamente a sua visão única.
+            </p>
+            <a href="javascript:void(0)" class="inline-block border-2 border-mclaren-papaya bg-mclaren-papaya text-black hover:bg-transparent hover:text-mclaren-papaya px-10 py-4 text-xs font-black uppercase tracking-widest transition-all shadow-lg">
+                DESCUBRA A MSO
+            </a>
+        </div>
+    </section>
+
+    <div class="relative w-full h-[500px] md:h-[650px] overflow-hidden bg-black">
+        <video id="msoVideo" class="w-full h-full object-cover scale-105" autoplay loop muted playsinline poster="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?q=80&w=1600">
+            <source src="Vídeos/mclaren-mso.mp4" type="video/mp4">
+            <source src="../McLaren/Vídeos/mclaren-mso.mp4" type="video/mp4">
+            <source src="https://cdn.pixabay.com/video/2020/05/25/40130-424930062_large.mp4" type="video/mp4">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-hands-of-a-craftsman-sewing-leather-43093-large.mp4" type="video/mp4">
+        </video>
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/30 pointer-events-none"></div>
+    </div>
+
+    <footer class="bg-black text-neutral-400 border-t border-neutral-900 py-16 px-6 md:px-12 text-xs">
+        <div class="max-w-[1440px] mx-auto grid grid-cols-2 md:grid-cols-5 gap-10 mb-16">
+            <div>
+                <h4 class="font-extrabold text-white uppercase mb-5 tracking-wider text-xs border-l-2 border-mclaren-papaya pl-3">MODELOS & PÁGINAS</h4>
+                <ul class="space-y-3 font-medium">
+                    <li><a href="McLaren.html" class="hover:text-mclaren-papaya transition-colors">Início (McLaren)</a></li>
+                    <li><a href="Automotive.html" class="hover:text-mclaren-papaya transition-colors">Automotive</a></li>
+                    <li><a href="hypercar.html" target="_blank" class="hover:text-mclaren-papaya transition-colors">Hypercar</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-extrabold text-white uppercase mb-5 tracking-wider text-xs border-l-2 border-mclaren-papaya pl-3">SOBRE A McLAREN</h4>
+                <ul class="space-y-3 font-medium">
+                    <li><a href="javascript:void(0)" class="hover:text-mclaren-papaya transition-colors">Nossa História</a></li>
+                    <li><a href="javascript:void(0)" class="hover:text-mclaren-papaya transition-colors">McLaren Group</a></li>
+                    <li><a href="javascript:void(0)" class="hover:text-mclaren-papaya transition-colors">Carreiras</a></li>
+                    <li><a href="javascript:void(0)" class="hover:text-mclaren-papaya transition-colors">Imprensa & Mídia</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-extrabold text-white uppercase mb-5 tracking-wider text-xs border-l-2 border-mclaren-papaya pl-3">EXPERIÊNCIAS</h4>
+                <ul class="space-y-3 font-medium">
+                    <li><a href="javascript:void(0)" class="hover:text-mclaren-papaya transition-colors">Pure McLaren</a></li>
+                    <li><a href="javascript:void(0)" class="hover:text-mclaren-papaya transition-colors">McLaren Trophy</a></li>
+                    <li><a href="javascript:void(0)" class="hover:text-mclaren-papaya transition-colors">Encontre um Revendedor</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-extrabold text-white uppercase mb-5 tracking-wider text-xs border-l-2 border-mclaren-papaya pl-3">REDES SOCIAIS</h4>
+                <ul class="space-y-3 font-medium">
+                    <li><a href="https://instagram.com" target="_blank" class="hover:text-mclaren-papaya transition-colors flex items-center gap-2"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                    <li><a href="https://youtube.com" target="_blank" class="hover:text-mclaren-papaya transition-colors flex items-center gap-2"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
+                    <li><a href="https://linkedin.com" target="_blank" class="hover:text-mclaren-papaya transition-colors flex items-center gap-2"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+                    <li><a href="https://x.com" target="_blank" class="hover:text-mclaren-papaya transition-colors flex items-center gap-2"><i class="fa-brands fa-x-twitter"></i> X (Twitter)</a></li>
+                </ul>
+            </div>
+            <div class="col-span-2 md:col-span-1">
+                <h4 class="font-extrabold text-white uppercase mb-5 tracking-wider text-xs border-l-2 border-mclaren-papaya pl-3">NEWSLETTER</h4>
+                <p class="mb-4 text-neutral-400 text-[11px] leading-relaxed">Subscreva para receber em primeira mão o lançamento dos novos modelos McLaren.</p>
+                <div class="flex flex-col gap-2">
+                    <input type="email" placeholder="Endereço de e-mail*" class="bg-neutral-900 border border-neutral-800 text-white px-4 py-3 text-xs focus:outline-none focus:border-mclaren-papaya transition-colors">
+                    <button class="bg-mclaren-papaya text-black hover:bg-orange-600 font-extrabold uppercase py-3 transition-colors text-xs tracking-wider">
+                        SUBSCREVER
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-[1440px] mx-auto pt-8 border-t border-neutral-900 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] text-neutral-500">
+            <p>&copy; 2026 McLaren Automotive Limited. Todos os direitos reservados.</p>
+            <div class="flex flex-wrap gap-6 font-medium">
+                <a href="McLaren.html" class="hover:text-mclaren-papaya transition-colors">Voltar ao Início</a>
+                <a href="javascript:void(0)" class="hover:text-mclaren-papaya transition-colors">Política de Privacidade</a>
+                <a href="javascript:void(0)" class="hover:text-mclaren-papaya transition-colors">Termos e Condições</a>
+                <a href="javascript:void(0)" class="hover:text-mclaren-papaya transition-colors">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function scrollCarousel(distance) {
+            const container = document.getElementById('carouselContainer');
+            container.scrollBy({ left: distance, behavior: 'smooth' });
+        }
+
+        function toggleHeroVideo() {
+            const video = document.getElementById('bgVideoAutomotive');
+            const btn = document.getElementById('videoBtn');
+            if (video.paused) {
+                video.play();
+                btn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+            } else {
+                video.pause();
+                btn.innerHTML = '<i class="fa-solid fa-play"></i>';
+            }
+        }
+    </script>
+
+</body>
+</html>

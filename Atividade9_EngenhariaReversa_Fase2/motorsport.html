@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>McLaren Motorsport</title>
+
+    <link rel="stylesheet" href="motorsport.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <button class="menu" aria-label="Open menu">
+            <span></span>
+            <span></span>
+        </button>
+
+        <a href="#" class="logo-link">
+            <img src="./imagens/logo-removebg-preview.png" alt="McLaren" class="logo">
+        </a>
+
+        <a href="#" class="retailer">
+            FIND A RETAILER
+            <span>→</span>
+        </a>
+
+    </header>
+
+
+    <nav class="models-nav">
+
+        <div class="models-title">
+            CURRENT MODELS
+        </div>
+
+        <div class="categories">
+            <a href="#">Supercars</a>
+            <a href="#">Grand Tourer</a>
+            <a href="hypercar.html">Hypercars</a>
+            <a href="#" class="active">Motorsport</a>
+        </div>
+
+        <div class="view-buttons">
+            <button aria-label="Grid view">▦</button>
+            <button aria-label="List view">☰</button>
+        </div>
+
+    </nav>
+
+
+    <main>
+
+        <section class="hero">
+
+        <div class="hero-car">
+    <div class="car-glow"></div>
+    <img
+        id="slider-image"
+        src="./imagens/w3.png"
+        alt="McLaren Motorsport"
+    >
+</div>
+            <div class="mclaren-controls-container">
+                <button id="prev-btn" type="button" class="mclaren-arrow-btn" aria-label="Previous Car">
+                    <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6H2M7 1L2 6L7 11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+
+                <div id="slider-bars" class="mclaren-bars-wrapper">
+                    <span class="mclaren-bar active" data-index="0"></span>
+                    <span class="mclaren-bar" data-index="1"></span>
+                    <span class="mclaren-bar" data-index="2"></span>
+                    <span class="mclaren-bar" data-index="3"></span>
+                </div>
+
+                <button id="next-btn" type="button" class="mclaren-arrow-btn" aria-label="Next Car">
+                    <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 6H16M11 1L16 6L11 11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="hero-information">
+                <div class="car-name">
+                    <h1 id="car-title">GT3 EVO</h1>
+                    <div class="car-links">
+                        <a href="#">EXPLORE <span>→</span></a>
+                        <a href="#">ENQUIRE <span>→</span></a>
+                    </div>
+                </div>
+
+                <div class="car-description">
+                    <p id="car-desc">
+                        Modelled on the race-winning 720S GT3. Proven and refined across thousands of kilometres on the track.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="journey" id="journey">
+
+            <div class="section-heading">
+                <h2>Continue your journey</h2>
+            </div>
+
+            <div class="journey-grid">
+                <a href="#" class="journey-card">
+                    <div class="card-image">
+                        <img src="./imagens/imagem1.jpg" alt="Customise your McLaren">
+                    </div>
+                    <div class="card-title">
+                        <span>CUSTOMISE YOUR McLAREN</span>
+                        <strong>→</strong>
+                    </div>
+                </a>
+
+                <a href="#" class="journey-card">
+                    <div class="card-image">
+                        <img src="./imagens/imagem2.jpg" alt="McLaren stories">
+                    </div>
+                    <div class="card-title">
+                        <span>McLAREN STORIES</span>
+                        <strong>→</strong>
+                    </div>
+                </a>
+
+                <a href="#" class="journey-card">
+                    <div class="card-image">
+                        <img src="./imagens/imagem3.jpg" alt="Find a retailer">
+                    </div>
+                    <div class="card-title">
+                        <span>FIND A RETAILER</span>
+                        <strong>→</strong>
+                    </div>
+                </a>
+            </div>
+
+        </section>
+
+
+        <section class="featured">
+            <img src="./imagens/imagem4.jpg" alt="McLaren 6GT" class="featured-image">
+            <div class="featured-overlay"></div>
+
+            <div class="featured-content">
+                <h2>Legend-Inspired</h2>
+                <p>The McL 6GT daringly imagines what our founder had wished to complete but with six additional decades of innovation.</p>
+                <a href="#" class="featured-link">DISCOVER McL 6GT <span>→</span></a>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer id="footer">
+
+        <div class="footer-top">
+            <div class="breadcrumb">
+                <a href="#">Home</a>
+                <span>/</span>
+                <a href="#">Immersive Range</a>
+                <span>/</span>
+                <strong>Motorsport</strong>
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>MORE LINKS</h3>
+                    <a href="#">Careers</a>
+                    <a href="#">Media</a>
+                    <a href="#">McLaren Group Holdings</a>
+                    <a href="#">McLaren Racing</a>
+                </div>
+
+                <div class="footer-column">
+                    <h3>USEFUL LINKS</h3>
+                    <a href="#">AI Usage</a>
+                    <a href="#">NFT</a>
+                </div>
+
+                <div class="footer-column">
+                    <h3>CONTACT US</h3>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Enquire</a>
+                    <a href="#">Find a Retailer</a>
+                    <a href="#">Roadside Assistance</a>
+                </div>
+
+                <div class="footer-column">
+                    <h3>FOLLOW US</h3>
+                    <a href="#">Instagram</a>
+                    <a href="#">YouTube</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">X</a>
+                </div>
+
+                <div class="subscribe">
+                    <h3>SUBSCRIBE</h3>
+                    <div class="email-box">
+                        <span>Enter email*</span>
+                        <strong>→</strong>
+                    </div>
+                    <p>Subscribe to our newsletter for the latest news from McLaren.</p>
+                    <button class="language">🌐 Global (English) <span>⌄</span></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-brand">
+                <img src="./imagens/logo-removebg-preview.png" alt="McLaren">
+            </div>
+            <div class="legal-links">
+                <a href="#">Cookie Policy</a>
+                <a href="#">Gender Gap Report</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms and Conditions</a>
+                <a href="#">Modern Slavery Statement</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="motorsport.js"></script>
+</body>
+
+</html>
