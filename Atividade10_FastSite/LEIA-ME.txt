@@ -1,0 +1,14 @@
+# SIST25 - Login com Java, JDBC e MySQL
+
+## Como executar
+1. Abra esta pasta no IntelliJ IDEA como projeto Maven.
+2. Aguarde o Maven carregar as dependências.
+3. Confira as credenciais em `src/main/java/Atividade9_FastSite/db/Conexao.java`.
+4. Confirme que a tabela `usuarios` existe no banco `sistema_cadastro` e que o usuário `admin` tem uma senha BCrypt.
+5. Execute `Atividade9_FastSite.Application.Servidor`.
+6. Abra `http://localhost:8080` no navegador.
+
+Usuário de teste criado anteriormente: `admin`
+Senha de teste: `123456`
+
+O Java valida a senha com BCrypt no backend. O navegador não guarda usuários nem compara hashes localmente.
